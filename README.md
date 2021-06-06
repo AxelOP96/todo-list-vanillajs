@@ -28,3 +28,5 @@ addToDoButton.addEventListener('click', function(){
         toDoContainer.removeChild(paragraph);
     });
 });
+Link de la aplicación
+https://todo-list-vanillajs.vercel.app/
