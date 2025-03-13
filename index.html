@@ -8,10 +8,36 @@
     <title>TO DO LIST</title>
 </head>
 <body>
-    <h1>To Do List</h1>
-    <div class="container"></div>
-    <input type="text" id="inputField"><button id="addToDo">+</button>
-    <div class="to-dos" id="toDoContainer"></div>
+    <header>
+        <h1>Tu lista</h1>
+    </header>
+    <section class="container">
+        <div class="hero">
+            <h2>No tienes nada para comprar</h2>
+            <img src="./fondogato.png" alt="Gato mirando su plato vacío">
+        </div>
+        <button class="add"><i class="fa-solid fa-plus">+</i></button>
+        
+        <div class="to-dos" id="toDoContainer"></div>
+    </section>
+    <section class="popup none">
+        <h3>Agregar item</h3>
+        <form action="">
+            <span class="close">X</span>
+            <input type="text" id="" placeholder="titulo" required>
+            <select name="" id="" required>
+                <option value="">Viveres</option>
+                <option value="">Lacteos</option>
+                <option value="">Verduras</option>
+                <option value="">Carnes</option>
+                <option value="">Tecnologia</option>
+                <option value="">Varios</option>
+            </select>
+            <textarea name="" id=""></textarea>
+            <button class="add-todo">Add</button>
+        </form>
+        
+    </section>
     <script src="app.js">
 
     </script>

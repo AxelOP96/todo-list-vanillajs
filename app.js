@@ -1,4 +1,4 @@
-var addToDoButton = document.getElementById('addToDo');
+/* var addToDoButton = document.getElementById('addToDo');
 var toDoContainer = document.getElementById('toDoContainer');
 var inputField = document.getElementById('inputField');
 addToDoButton.addEventListener('click', function(){
@@ -13,4 +13,18 @@ addToDoButton.addEventListener('click', function(){
     paragraph.addEventListener('dblclick', function(){
         toDoContainer.removeChild(paragraph);
     });
-});
+}); */
+
+
+const d = document;
+
+const $add = d.querySelector(".add"),
+$fondo = d.querySelector(".hero"),
+$popup = d.querySelector(".popup");
+
+
+d.addEventListener("click", (e)=>{
+    if(e.target === $add || e.target === `${$add} *`){
+        $popup.classList.remove("none");
+    }
+})

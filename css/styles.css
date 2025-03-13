@@ -1,22 +1,101 @@
-html, body {
-    width:50%;
-    margin: 0 auto;
-    font-family:Arial, Helvetica, sans-serif;
-    background: cyan;
-    color:teal;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    background: teal;
+    
+}
+header{
+    background-color: rgb(158, 158, 247);
+    padding: 2rem;
+    color:white;
+}
+.none{
+    display: none;
+}
+.add{
+    font-weight: bold;
+    
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    padding: 1.5rem;
+    background-color: rgb(158, 158, 247);
+    cursor: pointer;
+}
+h2{
+    padding: 1rem;
+    text-align: center;
+}
+.hero{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+i{
+    color: black;
+    font-size: 35px;
+    
+} 
+.popup{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 80%;
+    border-radius: .5rem;
+    max-height: fit-content;
+    position: absolute;
+    top: 10%;
+    left: 30px;
+    padding: 1rem;
+}
+.popup form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.popup form input, .popup form select{
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+}
+.add-todo{
+    background-color: rgb(158, 158, 247);
+    outline: none;
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    width: 50%;
+    margin: auto;
+    padding: 1rem 2rem;
+}
+.popup form select{
+    background-color: rgb(158, 158, 247);
+}
+.popup form input{
+    border-bottom: 1px solid grey;
+}
+.close{
+    position: relative;
+    top: -20px;
+    left: 240px;
 }
 .container{
     width:360px;
 }
-#inputField {
-    width:300px;
-    height:46px;
-    border:1px solid black;
-    outline:none;
-    font-size:30px;
-    vertical-align: middle;
-
-}#addToDo{
+#addToDo{
     height:50px;
     width:50px;
     border: 1px solid black;
