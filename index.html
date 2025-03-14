@@ -13,8 +13,8 @@
     </header>
     <section class="container">
         <div class="hero">
-            <h2>No tienes nada para comprar</h2>
-            <img src="./fondogato.png" alt="Gato mirando su plato vacío">
+            <h2 class="default">No tienes nada para comprar</h2>
+            <img class="default" src="./fondogato.png" alt="Gato mirando su plato vacío">
         </div>
         <button class="add"><i class="fa-solid fa-plus">+</i></button>
         
@@ -22,21 +22,24 @@
     </section>
     <section class="popup none">
         <h3>Agregar item</h3>
+        <span class="close">X</span>
         <form action="">
-            <span class="close">X</span>
-            <input type="text" id="" placeholder="titulo" required>
-            <select name="" id="" required>
-                <option value="">Viveres</option>
-                <option value="">Lacteos</option>
-                <option value="">Verduras</option>
-                <option value="">Carnes</option>
-                <option value="">Tecnologia</option>
-                <option value="">Varios</option>
+            <input type="text" id="titulo" name="titulo" placeholder="titulo" required>
+            <select id="option" name="option" required>
+                <option value="🛍️ viveres">🛍️ Viveres</option>
+                <option value="🥛 lacteos">🥛 Lacteos</option>
+                <option value="🥕 verduras">🥕 Verduras</option>
+                <option value="🥩 carnes">🥩 Carnes</option>
+                <option value="💻 tecnologia">💻 Tecnologia</option>
+                <option value="❓ varios">❓ Varios</option>
             </select>
-            <textarea name="" id=""></textarea>
+            <textarea name="text" id="text" ></textarea>
             <button class="add-todo">Add</button>
         </form>
         
+    </section>
+    <section id="details" class="description none">
+        <h2>Aca estoy</h2>
     </section>
     <script src="app.js">
 

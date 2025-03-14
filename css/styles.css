@@ -14,9 +14,7 @@ header{
     padding: 2rem;
     color:white;
 }
-.none{
-    display: none;
-}
+
 .add{
     font-weight: bold;
     
@@ -91,19 +89,34 @@ i{
     position: relative;
     top: -20px;
     left: 240px;
+    display: inline-block;
+    width:fit-content;
+    cursor: pointer;
+}
+.description{
+    width: 80%;
+    margin: auto;
+    background-color: white;
+
+}
+.none{
+    display: none;
+}
+ul{
+    background-color: white;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+ul li{
+    margin-top: 5px;
+}
+
+.more{
+    padding: 1em;
+    font-weight: bold;
 }
 .container{
     width:360px;
-}
-#addToDo{
-    height:50px;
-    width:50px;
-    border: 1px solid black;
-    vertical-align:middle;
-    font-size:30px;
-}
-.to-dos {
-    margin-top: 25px;
 }
 .paragraph-styling {
     margin:0;
