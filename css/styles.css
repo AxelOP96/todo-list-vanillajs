@@ -17,7 +17,7 @@ header{
 
 .add{
     font-weight: bold;
-    
+    display: block;
     border-radius: 50%;
     border: none;
     outline: none;
@@ -54,7 +54,7 @@ i{
     border-radius: .5rem;
     max-height: fit-content;
     position: absolute;
-    top: 10%;
+    top: 100px;
     left: 30px;
     padding: 1rem;
 }
@@ -96,30 +96,42 @@ i{
 .description{
     width: 80%;
     margin: auto;
-    background-color: white;
+    background-color: rgb(225, 223, 223);
     padding: 4rem 2rem;
     border-radius: .5rem;
     border: 1px solid rgb(158, 158, 247);
-    position: relative;
-    top: -50px;
-    z-index: 1;
+    position: absolute;
+    top: 200px;
+    z-index: 3;
     text-align: center;
-}
-.index{
-    z-index: 2;
+    left: 50px;
 }
 .none{
     display: none;
 }
-ul{
+.complete, .delete{
+    cursor: pointer;
+}
+ul li{
+    margin-top: 5px;
     background-color: white;
     padding: 2rem;
     border-radius: .5rem;
 }
-ul li{
-    margin-top: 5px;
+.row{
+    
+    margin-bottom: 30px;
+    gap: 2rem;
 }
-
+.completed{
+    position: relative;
+    right: calc(0px);
+    width: 80%;
+    margin: 1rem auto;
+    background-color: rgb(218, 246, 218);
+    padding: 1rem;
+    border-radius: .5rem;
+}
 .more{
     padding: 1em;
     font-weight: bold;
@@ -134,17 +146,46 @@ ul li{
     font-family:Arial, Helvetica, sans-serif;
 }
 @media (min-width: 500px){
+    .add{
+        display: none;
+    }
+    .row{
+        display: flex;
+    }
     .popup{
+        position: relative;
         display: block;
         width: 20%;
         order: 1;
-        top: 200px;
+        
+        z-index: 0;
     }
     .container{
         order: 2;
     }
+    .completed{
+        width: 30%;
+        order: 3;
+        display: none; 
+    }
+    #completed:has(ul li) {
+        display: block;
+    }
     .container {
         flex-direction: row; /* Cambiar a filas en pantallas más grandes */
     }
-    
+    .description{
+        width: 40%;
+        font-size: 30px;
+        position: absolute;
+        top: 200px;
+        z-index: 3;
+        text-align: center;
+        left: 300px;
+    }
+    .index{
+        position: relative;
+        top: -170px;
+        z-index: 4;
+    }
 }

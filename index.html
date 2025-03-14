@@ -11,36 +11,41 @@
     <header>
         <h1>Tu lista</h1>
     </header>
-    <section class="container">
-        <div class="hero">
-            <h2 class="default">No tienes nada para comprar</h2>
-            <img class="default" src="./fondogato.png" alt="Gato mirando su plato vacío">
-        </div>
-        <button class="add"><i class="fa-solid fa-plus">+</i></button>
-        
-        <!-- <div class="to-dos" id="toDoContainer"></div> -->
-    </section>
-    <section class="popup none">
-        <h3>Agregar item</h3>
-        <span class="close">X</span>
-        <form action="">
-            <input type="text" id="titulo" name="titulo" placeholder="titulo" required>
-            <select id="option" name="option" required>
-                <option value="🛍️ viveres">🛍️ Viveres</option>
-                <option value="🥛 lacteos">🥛 Lacteos</option>
-                <option value="🥕 verduras">🥕 Verduras</option>
-                <option value="🥩 carnes">🥩 Carnes</option>
-                <option value="💻 tecnologia">💻 Tecnologia</option>
-                <option value="❓ varios">❓ Varios</option>
-            </select>
-            <textarea name="text" id="text" ></textarea>
-            <button class="add-todo">Add</button>
-        </form>
-        
-    </section>
-    <section id="details" class="description none">
-        <span class="close">X</span>
-    </section>
+    <div class="row">
+        <section class="container">
+            <div class="hero">
+                <h2 class="default">No tienes nada para comprar</h2>
+                <img class="default" src="./fondogato.png" alt="Gato mirando su plato vacío">
+            </div>
+            <button class="add"><i class="fa-solid fa-plus">+</i></button>
+        </section>
+        <section class="popup none">
+            <h3>Agregar item</h3>
+            <span class="close">X</span>
+            <form action="">
+                <input type="text" id="titulo" name="titulo" placeholder="titulo" required>
+                <select id="option" name="option" required>
+                    <option value="🛍️ viveres">🛍️ Viveres</option>
+                    <option value="🥛 lacteos">🥛 Lacteos</option>
+                    <option value="🥕 verduras">🥕 Verduras</option>
+                    <option value="🥩 carnes">🥩 Carnes</option>
+                    <option value="💻 tecnologia">💻 Tecnologia</option>
+                    <option value="❓ varios">❓ Varios</option>
+                </select>
+                <textarea name="text" id="text" ></textarea>
+                <button class="add-todo">Add</button>
+            </form>
+            
+        </section>
+        <section id="details" class="description none">
+            <span class="close">X</span>
+        </section>
+        <section id="completed" class="completed none">
+            <h2>Tareas completadas</h2>
+            <ul></ul>
+        </section>
+    </div>
+    
     <script src="app.js"></script>
 </body>
 </html>
