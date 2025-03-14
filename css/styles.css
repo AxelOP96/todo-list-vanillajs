@@ -97,7 +97,16 @@ i{
     width: 80%;
     margin: auto;
     background-color: white;
-
+    padding: 4rem 2rem;
+    border-radius: .5rem;
+    border: 1px solid rgb(158, 158, 247);
+    position: relative;
+    top: -50px;
+    z-index: 1;
+    text-align: center;
+}
+.index{
+    z-index: 2;
 }
 .none{
     display: none;
@@ -114,10 +123,9 @@ ul li{
 .more{
     padding: 1em;
     font-weight: bold;
+    cursor: pointer;
 }
-.container{
-    width:360px;
-}
+
 .paragraph-styling {
     margin:0;
     cursor:pointer;
@@ -125,8 +133,18 @@ ul li{
     color:blue;
     font-family:Arial, Helvetica, sans-serif;
 }
-button:hover{
-    transform:scale(1.2);
-    background-color:teal;
-    cursor:pointer;
+@media (min-width: 500px){
+    .popup{
+        display: block;
+        width: 20%;
+        order: 1;
+        top: 200px;
+    }
+    .container{
+        order: 2;
+    }
+    .container {
+        flex-direction: row; /* Cambiar a filas en pantallas más grandes */
+    }
+    
 }

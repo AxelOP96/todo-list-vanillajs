@@ -3,7 +3,7 @@ const d = document;
 const $add = d.querySelector(".add"),
 $fondo = d.querySelector(".hero"),
 $popup = d.querySelector(".popup"),
-$close = d.querySelector(".close"),
+$close = d.querySelectorAll(".close"),
 $agregarItem = d.querySelector(".add-todo");
 const $ul = d.createElement("ul");
 const $default = d.querySelectorAll(".default");
@@ -15,22 +15,32 @@ d.addEventListener("click", (e)=>{
     if(e.target === $add || e.target === `${$add} *`) $popup.classList.remove("none");
 })
 d.addEventListener("click", (e)=>{
-    if(e.target === $close) $close.parentElement.classList.add("none");
+    $close.forEach((close)=>{
+        if(e.target === close) close.parentElement.classList.add("none");
+    })
+    
 })
 d.addEventListener("click", (e)=>{
-    if(e.target === $more){
-        console.log("El click funciona")
+    if (e.target.classList.contains("more")) {
         $details.classList.remove("none");
-        const span1 = d.createElement("span");
-        const span2 = d.createElement("span");
-        $lis.forEach((li)=>{
-            console.log(li);
-            //span1.textContent = 
-        })
-         
+        const spanClose = d.createElement("span");
+        spanClose.textContent = 'X';
+        spanClose.classList.add("close", "index")
+        
+        const liElement = e.target.parentElement; 
+        const description = liElement.nextSibling; 
+        const $icono = liElement.textContent.substring(0,1);
+        const title = liElement.textContent; 
+        const descText = description.textContent;
+        const $popupContent = d.querySelector("#details"); 
+        
+        $popupContent.innerHTML = `<h2>${$icono}</h2><h3>${title.substring(0, title.length-2)}</h3><p>${descText}</p>`;
+        $popupContent.appendChild(spanClose);
+        spanClose.addEventListener("click", () => {
+            $details.classList.add("none");
+        });
     }
 })
-//<i class="fa-solid fa-circle-chevron-right"> > </i>
 let id = 0; 
 form.addEventListener("submit", (e)=>{
     e.preventDefault();
@@ -47,7 +57,7 @@ form.addEventListener("submit", (e)=>{
     lititle.setAttribute("id", `${id}`);
     const lidescr = d.createElement("li");
     lidescr.classList.add("none")
-    lidescr.textContent =`${$description}"`
+    lidescr.textContent =`${$description}`
     $ul.appendChild(lititle);
     $ul.appendChild(lidescr);
 
